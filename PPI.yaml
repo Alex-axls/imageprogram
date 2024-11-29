@@ -1,0 +1,27 @@
+train: E:/pythonProject/ultralytics-main/PPI/images/train
+val: E:/pythonProject/ultralytics-main/PPI/images/val
+test: E:/pythonProject/ultralytics-main/PPI/images/test
+
+nc: 1  # 类别数
+names: ['boat']  # 类别名称
+
+# 训练参数
+batch_size: 16
+epochs: 200
+img_size: 640
+
+# 模型配置
+model:
+  type: YOLOv10
+  backbone: yolov10.pt  # 或者您使用的配置文件路径
+  pretrained: True
+
+# 优化器配置
+optimizer:
+  type: SGD
+  lr: 0.01
+  momentum: 0.9
+  weight_decay: 0.0005
+
+# 其他配置
+cache_images: True
